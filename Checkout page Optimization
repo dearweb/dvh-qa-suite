@@ -1,0 +1,10 @@
+The checkout optimization effort, tracked under issue V2-5265, focused on significantly reducing the redirection time
+  from the preview page to the checkout page, which was identified as approximately 30 seconds. The strategy involves
+  implementing asynchronous handling for key "fire and forget" APIs: create_preview_analytics, update_preview_analytics,
+  register, and create_order.
+
+  A detailed test plan, including specific test cases and documentation, has been created to verify the baseline
+  performance, confirm the optimized redirection time (targeting under 5 seconds), validate the asynchronous nature of
+  the APIs, ensure graceful error handling, and maintain the integrity of the entire user journey. The evidence
+  directory contains video recordings, presumably to document test execution. The current status indicates that test
+  execution is pending, with the final report template ready to be filled upon completion of the tests.
